@@ -1,3 +1,3 @@
 class Stat 
-    has_many :characters
+    has_one
 end

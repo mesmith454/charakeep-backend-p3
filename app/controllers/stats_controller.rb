@@ -19,4 +19,13 @@ class StatsController < ApplicationController
         render json: stat   
     end
 
+    def new 
+        stat = Stat.new
+    end
+
+    def create
+        stat = Stat.create
+        render json: stat
+    end 
+
 end
