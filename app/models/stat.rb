@@ -1,3 +1,3 @@
 class Stat 
-    has_one
+    belongs_to :character
 end
