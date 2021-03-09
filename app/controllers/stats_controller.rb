@@ -35,6 +35,6 @@ class StatsController < ApplicationController
         end
 
         def find_stat
-            stat = Stat.find(id: params[:id])
+            stat = Stat.find(id: params[:id]
         end
 end

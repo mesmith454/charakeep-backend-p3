@@ -38,7 +38,7 @@ class UsersController < ApplicationController
 
     private
         def user_params
-            params.require(:user).permit(:agility, :charisma, :dexterity, :intelligence, :strength, :wisdom)
+            params.require(:user).permit(:name)
         end
         
         def find_user 

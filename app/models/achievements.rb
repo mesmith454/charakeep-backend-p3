@@ -1,5 +1,3 @@
-class Achievement 
-    belongs_to :character
-
-    
+class Achievement < ApplicationRecord
+    belongs_to :character    
 end
