@@ -9,7 +9,6 @@
 User.destroy_all
 Character.destroy_all
 
-
 #Users Seeds
 megan = User.create(name: "Megan")
 cici = User.create(name: "CiCi")
