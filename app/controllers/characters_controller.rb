@@ -5,7 +5,7 @@ class CharactersController < ApplicationController
     end
 
     def show
-        character = Character.find_by(params[:id])
+        character = find_char
         render json: character
     end
 
@@ -20,17 +20,18 @@ class CharactersController < ApplicationController
     end
 
     def edit
-        character = Character.find(params[:id])
+        character = find_char
+        render json: character
     end
 
     def update
-        character = Character.find(params[:id])
+        character = find_char
         character.update
         render json: character    
     end
 
     def delete 
-        character = Character.find(params[:id])
+        character = find_char
         character.delete
         render json: character
     end
@@ -38,6 +39,10 @@ class CharactersController < ApplicationController
 private
     def character_params
        params.require(:character).permit(:name, :image, :history, :level, :user_id, :achievement_id, :stat_id, race_id, dndclass_id)
+    end
+
+    def find_char
+        character = Character.find(id: params[:id])
     end
 
 end

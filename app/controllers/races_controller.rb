@@ -5,7 +5,7 @@ class RacesController < ApplicationController
     end
 
     def show
-        race = Race.find_by(params[:id])
+        race = Race.find_by(id: params[:id])
         render json: race
     end
 end

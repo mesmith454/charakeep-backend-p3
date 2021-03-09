@@ -5,16 +5,16 @@ class StatsController < ApplicationController
     end
 
     def show
-        stat = Stat.find_by(id: params[:id])
+        stat = find_stat
         render json: stat
     end
     
     def edit
-        stat = Stat.find(id: params[:id])
+        stat = find_stat
     end
 
     def update
-        stat = Stat.find(id: params[:id])
+        stat = find_stat
         stat.update
         render json: stat   
     end
@@ -23,15 +23,15 @@ class StatsController < ApplicationController
         stat = Stat.new(stat_params)
     end
 
-    def create(stat_params)
-        stat = Stat.create
+    def create
+        stat = Stat.create(stat_params)
         render json: stat
     end 
 
     private
 
         def stat_params
-            params.require(:stat).permit(:name)
+            params.require(:stat).permit(:agility, :charisma, :dexterity, :intelligence, :strength, :wisdom, :character_id)
         end
 
         def find_stat

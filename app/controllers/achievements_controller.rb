@@ -2,14 +2,15 @@ class AchievementsController < ApplicationController
     def index
         achievements = Achievements.all 
         render json: achievements
-
+    end
+    
     def show
-        achievement = Achievement.find_by(id: params[:id])
+        achievement = find_achieve
         render json: achievement
     end
     
     def new
-        achievement = Achievement.new(character_params)
+        achievement = Achievement.new(achievement_params)
         render json: achievement
     end
 
@@ -20,7 +21,11 @@ class AchievementsController < ApplicationController
 
     private
         def achievement_params
-            params.require(:achievement).permit(:description)
+            params.require(:achievement).permit(:description, :character_id)
+        end
+
+        def find_achieve
+            achieve = Achievement.find_by(id: params[:id])
         end
 
 end

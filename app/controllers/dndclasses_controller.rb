@@ -5,7 +5,7 @@ class DndclassesController
     end
 
     def show
-        dndclass = Dndclass.find_by(params[:id])
+        dndclass = Dndclass.find_by(id: params[:id])
         render json: dndclass
     end
 end
