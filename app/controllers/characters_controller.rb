@@ -10,12 +10,12 @@ class CharactersController < ApplicationController
     end
 
     def new
-        character = Character.new
+        character = Character.new(character_params)
         render json: character
     end
 
     def create 
-        character = Character.create
+        character = Character.create(character_params)
         render json: character
     end
 
@@ -32,12 +32,12 @@ class CharactersController < ApplicationController
     def delete 
         character = Character.find(params[:id])
         character.delete
-        render json: index
+        render json: character
     end
 
-#private
-    #def character_params
-       # params.require().permit()
-    #end
+private
+    def character_params
+       params.require(:character).permit(:name, :image, :history, :level, :user_id, :achievement_id, :stat_id, race_id, dndclass_id)
+    end
 
 end

@@ -1,9 +1,9 @@
 class Character < ApplicationRecord
     belongs_to :user
-    has_one :race
-    has_many :stats
+    belongs_to :race
+    belongs_to :stat
     has_many :achievements
-    has_one :character
+    belongs_to :dndclass
 
     validates :name, presence: true
 end

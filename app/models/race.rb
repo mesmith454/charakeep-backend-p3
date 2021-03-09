@@ -1,3 +1,3 @@
 class Race
-    belongs_to :character
+    has_many :characters
 end

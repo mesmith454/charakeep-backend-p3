@@ -11,25 +11,22 @@ Character.destroy_all
 
 
 #Users Seeds
-User.create(name: "Megan")
-User.create(name: "CiCi")
-
-#Character Seeds
-Character.create(name: "Freyja Rubymaul", image: "./ck-frontend/assets/images/freyjarm.jpg", history: "Wisdom is knowing that tomato is not a fruit", level: 5, user_id: 0, stat_id: 0, race_id: 1, dndclass_id: 4)
+megan = User.create(name: "Megan")
+cici = User.create(name: "CiCi")
 
 #Stat Set Seeds
 Stat.create(agility: 11, charisma: 14, dexterity: 10, intelligence: 15, strength: 17, wisdom: 13)
 
 #Race Seeds
-Race.create(name: "Human")
-Race.create(name: "Dwarf")
-Race.create(name: "Tiefling")
-Race.create(name: "Elf")
-Race.create(name: "Orc")
-Race.create(name: "Halfling")
+human = Race.create(name: "Human")
+dwarf = Race.create(name: "Dwarf")
+tiefling = Race.create(name: "Tiefling")
+elf = Race.create(name: "Elf")
+orc = Race.create(name: "Orc")
+halfling = Race.create(name: "Halfling")
 
 #Class seeds
-Class.create(name: "Cleric")
+cleric = Class.create(name: "Cleric")
 Class.create(name: "Bard")
 Class.create(name: "Barbarian")
 Class.create(name: "Paladin")
@@ -39,4 +36,5 @@ Class.create(name: "Warlock")
 Class.create(name: "Druid")
 Class.create(name: "Warrior")
 
-
+#Character Seeds
+Character.create(name: "Freyja Rubymaul", image: "./ck-frontend/assets/images/freyjarm.jpg", history: "Wisdom is knowing that tomato is not a fruit", level: 5, user: megan, stat_id: 0, race_id: 1, dndclass_id: 4, achievement_id: 0)
