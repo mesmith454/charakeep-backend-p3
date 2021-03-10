@@ -1,6 +1,6 @@
 class StatsController < ApplicationController
     def index
-        stats = Stats.all 
+        stats = Stat.all 
         render json: stats
     end
 
@@ -35,6 +35,6 @@ class StatsController < ApplicationController
         end
 
         def find_stat
-            stat = Stat.find(id: params[:id]
+            stat = Stat.find(params[:id])
         end
 end

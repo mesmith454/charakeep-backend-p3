@@ -24,10 +24,10 @@ Rails.application.routes.draw do
   delete '/stats/:id' => 'stats#delete'
 
   get '/races' => 'races#index'
-  get 'races/:id' => 'races#show'
+  get '/races/:id' => 'races#show'
 
   get '/dndclasses' => 'dndclasses#index'
-  get '/dndclasses' => 'dndclasses#show'
+  get '/dndclasses/:id' => 'dndclasses#show'
 
   get '/achievements' => 'achievements#index'
   get '/achievements/:id' => 'achievements#show'

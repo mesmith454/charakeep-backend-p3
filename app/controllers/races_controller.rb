@@ -1,6 +1,6 @@
 class RacesController < ApplicationController
     def index
-        races = Races.all 
+        races = Race.all 
         render json: races
     end
 

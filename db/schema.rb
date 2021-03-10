@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_09_175250) do
+ActiveRecord::Schema.define(version: 2021_03_10_191017) do
 
   create_table "achievements", force: :cascade do |t|
     t.string "description"
@@ -27,7 +27,6 @@ ActiveRecord::Schema.define(version: 2021_03_09_175250) do
     t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "achievement_id"
     t.integer "stat_id"
     t.integer "race_id"
     t.integer "dndclass_id"

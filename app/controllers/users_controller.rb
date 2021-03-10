@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
     def index
-        users = Users.all 
+        users = User.all 
         render json: users
     end
 
@@ -42,6 +42,6 @@ class UsersController < ApplicationController
         end
         
         def find_user 
-            user = User.find(id: params[:id])
+            user = User.find(params[:id])
         end
 end

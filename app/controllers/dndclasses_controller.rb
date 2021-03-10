@@ -1,6 +1,6 @@
 class DndclassesController < ApplicationController
     def index
-        dndclass = Dndclasses.all 
+        dndclass = Dndclass.all 
         render json: dndclass
     end
 

@@ -6,7 +6,6 @@ class CreateCharacters < ActiveRecord::Migration[6.1]
       t.string :history
       t.integer :level
 
-      t.integer :achievement_id, foreign_key: true
       t.integer :stat_id, foreign_key: true
       t.integer :race_id, foreign_key: true
       t.integer :user_id, foreign_key: true
