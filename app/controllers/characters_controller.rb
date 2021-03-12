@@ -42,7 +42,7 @@ private
     end
 
     def find_char
-        character = Character.find(id: params[:id])
+        character = Character.find_by(id: params[:id])
     end
 
 end

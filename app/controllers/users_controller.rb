@@ -6,7 +6,12 @@ class UsersController < ApplicationController
 
     def show
         user = find_user
-        render json: user
+        render json: user, include: {
+	        characters: { include: [
+		        :race, :stat, :dndclass
+            ]
+	}
+}
     end
 
     def new
@@ -42,6 +47,6 @@ class UsersController < ApplicationController
         end
         
         def find_user 
-            user = User.find(params[:id])
+            user = User.find_by(id: params[:id])
         end
 end
