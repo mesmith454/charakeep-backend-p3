@@ -27,8 +27,8 @@ orc = Race.create(name: "Orc")
 halfling = Race.create(name: "Halfling")
 
 #achievement Seeds
-achieveempty = Achievements.create(description: "started a journey")
-dragonspeaker = Achievements.create(description: "DragonSpeaker")
+achieveempty = Achievement.create(description: "started a journey")
+dragonspeaker = Achievement.create(description: "DragonSpeaker")
 
 #Class seeds
 cleric = Dndclass.create(name: "Cleric")
